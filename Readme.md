@@ -1,0 +1,47 @@
+# blaebus
+
+Selbstgehostete, datenschutzkonforme Alternative zu kommerziellen KI-Diktiergeräten (Plaud Note Pro u.ä.).
+
+Sprachaufnahmen → Telegram-Bot → Transkription → KI-Zusammenfassung → Obsidian Vault.
+
+## Prinzipien
+
+- **Datensouveränität:** Alle Daten unter eigener Kontrolle, DSGVO-konform
+- **Kein Vendor-Lock-in:** Jede Komponente austauschbar
+- **Open Source:** FOSS-Stack, transparent und nachvollziehbar
+- **Lernprojekt:** Dokumentierter Aufbauprozess als Proof of Work
+
+## Status
+
+🔬 **Phase 0 – Orientierung & Konzept** (aktiv)
+
+Siehe [docs/ROADMAP.md](https://claude.ai/chat/docs/ROADMAP.md) für den aktuellen Stand.
+
+## Dokumentation
+
+|Dokument|Inhalt|
+|---|---|
+|[PROJECT_LOG.md](https://claude.ai/chat/docs/PROJECT_LOG.md)|Chronologisches Protokoll aller Sessions|
+|[ROADMAP.md](https://claude.ai/chat/docs/ROADMAP.md)|Phasen und nächste Schritte|
+|[ARCHITECTURE.md](https://claude.ai/chat/docs/ARCHITECTURE.md)|Technische Architektur und Komponentenwahl|
+|[DECISIONS.md](https://claude.ai/chat/docs/DECISIONS.md)|Architecture Decision Records|
+
+## Geplanter Stack
+
+- **Interface:** Telegram Bot (Python)
+- **Transkription:** faster-whisper (CPU-basiert)
+- **Sprechererkennung:** pyannote.audio
+- **Rauschunterdrückung:** DeepFilterNet / RNNoise
+- **KI-Zusammenfassung:** LLM via API (Pay-per-Use)
+- **Vektordatenbank:** ChromaDB
+- **Ausgabe:** Obsidian Vault (Markdown + Frontmatter)
+- **Deployment:** Docker Compose
+- **Hosting:** Hetzner VPS (Produktion) + Heimserver (Entwicklung)
+
+## Kostenrahmen
+
+~13–23 €/Monat (VPS + LLM-Nutzung)
+
+## Lizenz
+
+_Noch festzulegen_
